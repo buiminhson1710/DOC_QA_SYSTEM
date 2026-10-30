@@ -1,0 +1,12 @@
+[
+  {"id": "_HUONG_DAN", "note": "ĐÂY LÀ MẪU. Hãy thay phần <<...>> bằng nguyên văn lấy từ văn bản thật của bạn rồi KIỂM TRA LẠI với bản gốc. Không dùng mẫu này khi chưa điền: nội dung pháp lý chưa được xác minh."},
+  {"id": "R1", "category": "lookup", "q": "Điều <<N>> Nghị định <<số hiệu>> quy định thế nào về <<chủ đề>>?",
+   "evidence": ["<<nguyên văn một đoạn chứa đáp án>>"], "answer_includes": ["<<giá trị chính>>"], "expect_docs": ["<<số hiệu văn bản>>"]},
+  {"id": "R2", "category": "amended", "q": "<<câu hỏi về điều khoản đã được văn bản sửa đổi thay đổi>>",
+   "evidence": ["<<nguyên văn nội dung HIỆN HÀNH trong văn bản sửa đổi>>"], "stale": ["<<nguyên văn nội dung CŨ trong văn bản gốc>>"],
+   "answer_includes": ["<<giá trị mới>>"], "stale_answer_values": ["<<giá trị cũ>>"], "expect_docs": ["<<số hiệu văn bản sửa đổi>>", "<<số hiệu văn bản gốc>>"]},
+  {"id": "R3", "category": "relation", "q": "<<văn bản nào bãi bỏ/thay thế văn bản X?>>",
+   "evidence": ["<<nguyên văn câu bãi bỏ/thay thế>>"], "answer_includes": ["<<số hiệu văn bản bãi bỏ>>"]},
+  {"id": "R4", "category": "ocr_noisy", "q": "<<câu hỏi về nội dung nằm ở trang scan chất lượng thấp>>", "evidence": ["<<đoạn chữ>>"], "answer_includes": ["<<giá trị>>"]},
+  {"id": "R5", "category": "no_data", "q": "<<câu hỏi mà bộ văn bản của bạn KHÔNG có thông tin>>", "evidence": [], "answerable": false}
+]

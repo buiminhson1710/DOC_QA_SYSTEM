@@ -1,0 +1,2670 @@
+{
+ "note": "Embedding GIẢ LẬP (băm n-gram ký tự) + kho tổng hợp: đo cơ chế pipeline, không dự đoán chất lượng embedding thật.",
+ "corpus": [
+  {
+   "doc": "101/2030/NĐ-CP",
+   "chunks": 4,
+   "ingest": "complete",
+   "relations": []
+  },
+  {
+   "doc": "202/2031/NĐ-CP",
+   "chunks": 10,
+   "ingest": "complete",
+   "relations": [
+    {
+     "type": "amends",
+     "target": "101/2030/NĐ-CP",
+     "scope": "partial"
+    }
+   ]
+  },
+  {
+   "doc": "303/2031/NĐ-CP",
+   "chunks": 2,
+   "ingest": "complete",
+   "relations": [
+    {
+     "type": "replaces",
+     "target": "55/2019/NĐ-CP",
+     "scope": "full"
+    },
+    {
+     "type": "repeals",
+     "target": "77/2018/NĐ-CP",
+     "scope": "full"
+    }
+   ]
+  },
+  {
+   "doc": "15/2031/TT-BYT",
+   "chunks": 2,
+   "ingest": "complete",
+   "relations": []
+  },
+  {
+   "doc": "404/2030/NĐ-CP",
+   "chunks": 2,
+   "ingest": "complete",
+   "relations": []
+  }
+ ],
+ "n_questions": 32,
+ "top_k": 6,
+ "configs": {
+  "vector_only": {
+   "config": "vector_only",
+   "flags": {
+    "hybrid_search": false,
+    "pin_articles": false,
+    "expand_amendments": false
+   },
+   "overall": {
+    "n": 29,
+    "recall@1": 0.5,
+    "recall@3": 0.672,
+    "recall@5": 0.759,
+    "mrr": 0.629,
+    "context_hit": 0.793,
+    "context_recall": 0.828,
+    "stale_in_context": 0.857,
+    "current_marked_amendment": 0.0,
+    "stale_without_current": 0.286
+   },
+   "by_category": {
+    "amended": {
+     "n": 6,
+     "recall@1": 0.167,
+     "recall@3": 0.5,
+     "recall@5": 0.667,
+     "mrr": 0.311,
+     "context_hit": 0.667,
+     "context_recall": 0.667,
+     "stale_in_context": 1.0,
+     "current_marked_amendment": 0.0,
+     "stale_without_current": 0.25
+    },
+    "amended_long": {
+     "n": 3,
+     "recall@1": 0.333,
+     "recall@3": 0.333,
+     "recall@5": 0.333,
+     "mrr": 0.333,
+     "context_hit": 0.333,
+     "context_recall": 0.333,
+     "stale_in_context": 0.667,
+     "current_marked_amendment": 0.0,
+     "stale_without_current": 0.333
+    },
+    "lookup": {
+     "n": 8,
+     "recall@1": 0.625,
+     "recall@3": 0.75,
+     "recall@5": 0.875,
+     "mrr": 0.733,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "multi_doc": {
+     "n": 3,
+     "recall@1": 0.167,
+     "recall@3": 0.5,
+     "recall@5": 0.667,
+     "mrr": 0.611,
+     "context_hit": 0.333,
+     "context_recall": 0.667,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "ocr_noisy": {
+     "n": 3,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "paraphrase": {
+     "n": 3,
+     "recall@1": 0.667,
+     "recall@3": 0.667,
+     "recall@5": 0.667,
+     "mrr": 0.722,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "relation": {
+     "n": 3,
+     "recall@1": 0.667,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.833,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    }
+   },
+   "latency_ms": {
+    "p50": 2.8,
+    "p95": 4.0
+   },
+   "est_context_tokens": {
+    "mean": 1938,
+    "max": 2320
+   },
+   "unanswerable": [
+    {
+     "id": "N1",
+     "top_vector_score": 0.5269598183040568,
+     "n_sources": 6
+    },
+    {
+     "id": "N2",
+     "top_vector_score": 0.5601179003515302,
+     "n_sources": 6
+    },
+    {
+     "id": "N3",
+     "top_vector_score": 0.4924901935027348,
+     "n_sources": 6
+    }
+   ],
+   "answerable_top_vector_score": [
+    0.5872,
+    0.5899,
+    0.6,
+    0.5653,
+    0.569,
+    0.5845,
+    0.4563,
+    0.3623,
+    0.5766,
+    0.5912,
+    0.6288,
+    0.6666,
+    0.5411,
+    0.6294,
+    0.606,
+    0.4689,
+    0.5545,
+    0.5636,
+    0.5064,
+    0.5299,
+    0.6523,
+    0.5253,
+    0.7271,
+    0.5534,
+    0.6789,
+    0.5076,
+    0.5335,
+    0.3672,
+    0.6547
+   ],
+   "per_question": [
+    {
+     "id": "A1",
+     "category": "lookup",
+     "n_sources": 6,
+     "evidence_rank": {
+      "bao hanh toi thieu cua thiet bi y te la 24 thang": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 5664,
+     "top_vector_score": 0.5872
+    },
+    {
+     "id": "A2",
+     "category": "lookup",
+     "n_sources": 6,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6742,
+     "top_vector_score": 0.5899
+    },
+    {
+     "id": "A3",
+     "category": "lookup",
+     "n_sources": 6,
+     "evidence_rank": {
+      "luu tru toi thieu 10 nam": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6542,
+     "top_vector_score": 0.6
+    },
+    {
+     "id": "A4",
+     "category": "lookup",
+     "n_sources": 6,
+     "evidence_rank": {
+      "bon nhom a b c d": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6045,
+     "top_vector_score": 0.5653
+    },
+    {
+     "id": "A5",
+     "category": "lookup",
+     "n_sources": 6,
+     "evidence_rank": {
+      "dao tao toi thieu 16 gio": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6675,
+     "top_vector_score": 0.569
+    },
+    {
+     "id": "A6",
+     "category": "lookup",
+     "n_sources": 6,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 5
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "mrr": 0.2,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 5362,
+     "top_vector_score": 0.5845
+    },
+    {
+     "id": "A7",
+     "category": "lookup",
+     "n_sources": 6,
+     "evidence_rank": {
+      "bao cao su co nghiem trong trong vong 24 gio": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6742,
+     "top_vector_score": 0.4563
+    },
+    {
+     "id": "A8",
+     "category": "lookup",
+     "n_sources": 6,
+     "evidence_rank": {
+      "nhiet do tu 2 den 8 do c": 6
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.16666666666666666,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 5993,
+     "top_vector_score": 0.3623
+    },
+    {
+     "id": "M1",
+     "category": "amended",
+     "n_sources": 6,
+     "evidence_rank": {
+      "la 1 5 ty dong cho moi goi mua sam": 3
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.3333333333333333,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": false,
+     "stale_without_current": false,
+     "context_chars": 6335,
+     "top_vector_score": 0.5766
+    },
+    {
+     "id": "M2",
+     "category": "amended",
+     "n_sources": 6,
+     "evidence_rank": {
+      "la 1 5 ty dong cho moi goi mua sam": 3
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.3333333333333333,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": false,
+     "stale_without_current": false,
+     "context_chars": 3457,
+     "top_vector_score": 0.5912
+    },
+    {
+     "id": "M3",
+     "category": "amended",
+     "n_sources": 6,
+     "evidence_rank": {
+      "giai quyet trong thoi han 15 ngay lam viec": null
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.0,
+     "context_hit": false,
+     "context_recall": 0.0,
+     "stale_in_context": true,
+     "current_marked_amendment": false,
+     "stale_without_current": true,
+     "context_chars": 5925,
+     "top_vector_score": 0.6288
+    },
+    {
+     "id": "M4",
+     "category": "amended",
+     "n_sources": 6,
+     "evidence_rank": {
+      "tu 30 trieu dong den 60 trieu dong": 5
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "mrr": 0.2,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": false,
+     "stale_without_current": false,
+     "context_chars": 6431,
+     "top_vector_score": 0.6666
+    },
+    {
+     "id": "M5",
+     "category": "amended",
+     "n_sources": 6,
+     "evidence_rank": {
+      "giai quyet trong thoi han 15 ngay lam viec": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 3195,
+     "top_vector_score": 0.5411
+    },
+    {
+     "id": "M7",
+     "category": "amended_long",
+     "n_sources": 6,
+     "evidence_rank": {
+      "co hieu luc 48 thang ke tu ngay cap": null
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.0,
+     "context_hit": false,
+     "context_recall": 0.0,
+     "stale_in_context": false,
+     "current_marked_amendment": false,
+     "stale_without_current": false,
+     "context_chars": 4891,
+     "top_vector_score": 0.6294
+    },
+    {
+     "id": "M8",
+     "category": "amended_long",
+     "n_sources": 6,
+     "evidence_rank": {
+      "co hieu luc 48 thang ke tu ngay cap": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": false,
+     "stale_without_current": false,
+     "context_chars": 6050,
+     "top_vector_score": 0.606
+    },
+    {
+     "id": "M9",
+     "category": "amended_long",
+     "n_sources": 6,
+     "evidence_rank": {
+      "duoc gia han hai lan": null
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.0,
+     "context_hit": false,
+     "context_recall": 0.0,
+     "stale_in_context": true,
+     "current_marked_amendment": false,
+     "stale_without_current": true,
+     "context_chars": 4257,
+     "top_vector_score": 0.4689
+    },
+    {
+     "id": "M6",
+     "category": "amended",
+     "n_sources": 6,
+     "evidence_rank": {
+      "bai bo khoan 3 dieu 9": null
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.0,
+     "context_hit": false,
+     "context_recall": 0.0,
+     "context_chars": 6627,
+     "top_vector_score": 0.5545
+    },
+    {
+     "id": "X1",
+     "category": "multi_doc",
+     "n_sources": 6,
+     "evidence_rank": {
+      "ke khai lai gia khi co bien dong la 45 ngay": 4,
+      "bao hanh toi thieu cua thiet bi y te la 24 thang": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.5,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6373,
+     "top_vector_score": 0.5636
+    },
+    {
+     "id": "X2",
+     "category": "multi_doc",
+     "n_sources": 6,
+     "evidence_rank": {
+      "luu mau thuoc la 3 nam": null,
+      "luu tru toi thieu 10 nam": 3
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.5,
+     "recall@5": 0.5,
+     "mrr": 0.3333333333333333,
+     "context_hit": false,
+     "context_recall": 0.5,
+     "context_chars": 6553,
+     "top_vector_score": 0.5064
+    },
+    {
+     "id": "X3",
+     "category": "multi_doc",
+     "n_sources": 6,
+     "evidence_rank": {
+      "cong khai tren cong thong tin cua co quan quan ly trong 5 ngay lam viec": 1,
+      "giai quyet trong thoi han 15 ngay lam viec": null
+     },
+     "recall@1": 0.5,
+     "recall@3": 0.5,
+     "recall@5": 0.5,
+     "mrr": 1.0,
+     "context_hit": false,
+     "context_recall": 0.5,
+     "context_chars": 5851,
+     "top_vector_score": 0.5299
+    },
+    {
+     "id": "R1",
+     "category": "relation",
+     "n_sources": 6,
+     "evidence_rank": {
+      "bai bo nghi dinh so 77/2018/nd-cp": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 4302,
+     "top_vector_score": 0.6523
+    },
+    {
+     "id": "R2",
+     "category": "relation",
+     "n_sources": 6,
+     "evidence_rank": {
+      "thay the nghi dinh so 55/2019/nd-cp": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 3497,
+     "top_vector_score": 0.5253
+    },
+    {
+     "id": "R3",
+     "category": "relation",
+     "n_sources": 6,
+     "evidence_rank": {
+      "sua doi bo sung mot so dieu cua nghi dinh so 101/2030/nd-cp": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 3945,
+     "top_vector_score": 0.7271
+    },
+    {
+     "id": "O1",
+     "category": "ocr_noisy",
+     "n_sources": 6,
+     "evidence_rank": {
+      "sau khi mo nap la 28 ngay": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6401,
+     "top_vector_score": 0.5534
+    },
+    {
+     "id": "O2",
+     "category": "ocr_noisy",
+     "n_sources": 6,
+     "evidence_rank": {
+      "tieu huy trong thoi han 60 ngay": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6200,
+     "top_vector_score": 0.6789
+    },
+    {
+     "id": "O3",
+     "category": "ocr_noisy",
+     "n_sources": 6,
+     "evidence_rank": {
+      "nhiet do 15 den 25 do c": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6701,
+     "top_vector_score": 0.5076
+    },
+    {
+     "id": "P1",
+     "category": "paraphrase",
+     "n_sources": 6,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6370,
+     "top_vector_score": 0.5335
+    },
+    {
+     "id": "P2",
+     "category": "paraphrase",
+     "n_sources": 6,
+     "evidence_rank": {
+      "sau khi mo nap la 28 ngay": 6
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.16666666666666666,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6026,
+     "top_vector_score": 0.3672
+    },
+    {
+     "id": "P3",
+     "category": "paraphrase",
+     "n_sources": 6,
+     "evidence_rank": {
+      "bao cao su co nghiem trong trong vong 24 gio": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6675,
+     "top_vector_score": 0.6547
+    }
+   ]
+  },
+  "baseline_prev": {
+   "config": "baseline_prev",
+   "flags": {
+    "hybrid_search": false,
+    "pin_articles": false,
+    "expand_amendments": true
+   },
+   "overall": {
+    "n": 29,
+    "recall@1": 0.5,
+    "recall@3": 0.672,
+    "recall@5": 0.759,
+    "mrr": 0.629,
+    "context_hit": 0.862,
+    "context_recall": 0.897,
+    "stale_in_context": 0.857,
+    "current_marked_amendment": 0.857,
+    "stale_without_current": 0.0
+   },
+   "by_category": {
+    "amended": {
+     "n": 6,
+     "recall@1": 0.167,
+     "recall@3": 0.5,
+     "recall@5": 0.667,
+     "mrr": 0.311,
+     "context_hit": 0.833,
+     "context_recall": 0.833,
+     "stale_in_context": 1.0,
+     "current_marked_amendment": 1.0,
+     "stale_without_current": 0.0
+    },
+    "amended_long": {
+     "n": 3,
+     "recall@1": 0.333,
+     "recall@3": 0.333,
+     "recall@5": 0.333,
+     "mrr": 0.333,
+     "context_hit": 0.667,
+     "context_recall": 0.667,
+     "stale_in_context": 0.667,
+     "current_marked_amendment": 0.667,
+     "stale_without_current": 0.0
+    },
+    "lookup": {
+     "n": 8,
+     "recall@1": 0.625,
+     "recall@3": 0.75,
+     "recall@5": 0.875,
+     "mrr": 0.733,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "multi_doc": {
+     "n": 3,
+     "recall@1": 0.167,
+     "recall@3": 0.5,
+     "recall@5": 0.667,
+     "mrr": 0.611,
+     "context_hit": 0.333,
+     "context_recall": 0.667,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "ocr_noisy": {
+     "n": 3,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "paraphrase": {
+     "n": 3,
+     "recall@1": 0.667,
+     "recall@3": 0.667,
+     "recall@5": 0.667,
+     "mrr": 0.722,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "relation": {
+     "n": 3,
+     "recall@1": 0.667,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.833,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    }
+   },
+   "latency_ms": {
+    "p50": 2.3,
+    "p95": 3.0
+   },
+   "est_context_tokens": {
+    "mean": 2479,
+    "max": 3054
+   },
+   "unanswerable": [
+    {
+     "id": "N1",
+     "top_vector_score": 0.5269598160387113,
+     "n_sources": 6
+    },
+    {
+     "id": "N2",
+     "top_vector_score": 0.5601178999140136,
+     "n_sources": 9
+    },
+    {
+     "id": "N3",
+     "top_vector_score": 0.49249019374558084,
+     "n_sources": 8
+    }
+   ],
+   "answerable_top_vector_score": [
+    0.5872,
+    0.5899,
+    0.6,
+    0.5653,
+    0.569,
+    0.5845,
+    0.4563,
+    0.3623,
+    0.5766,
+    0.5912,
+    0.6288,
+    0.6666,
+    0.5411,
+    0.6294,
+    0.606,
+    0.4689,
+    0.5545,
+    0.5636,
+    0.5064,
+    0.5299,
+    0.6523,
+    0.5253,
+    0.7271,
+    0.5534,
+    0.6789,
+    0.5076,
+    0.5335,
+    0.3672,
+    0.6547
+   ],
+   "per_question": [
+    {
+     "id": "A1",
+     "category": "lookup",
+     "n_sources": 8,
+     "evidence_rank": {
+      "bao hanh toi thieu cua thiet bi y te la 24 thang": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 7381,
+     "top_vector_score": 0.5872
+    },
+    {
+     "id": "A2",
+     "category": "lookup",
+     "n_sources": 8,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8488,
+     "top_vector_score": 0.5899
+    },
+    {
+     "id": "A3",
+     "category": "lookup",
+     "n_sources": 7,
+     "evidence_rank": {
+      "luu tru toi thieu 10 nam": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 7854,
+     "top_vector_score": 0.6
+    },
+    {
+     "id": "A4",
+     "category": "lookup",
+     "n_sources": 9,
+     "evidence_rank": {
+      "bon nhom a b c d": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8976,
+     "top_vector_score": 0.5653
+    },
+    {
+     "id": "A5",
+     "category": "lookup",
+     "n_sources": 9,
+     "evidence_rank": {
+      "dao tao toi thieu 16 gio": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 9162,
+     "top_vector_score": 0.569
+    },
+    {
+     "id": "A6",
+     "category": "lookup",
+     "n_sources": 9,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 5
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "mrr": 0.2,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 7251,
+     "top_vector_score": 0.5845
+    },
+    {
+     "id": "A7",
+     "category": "lookup",
+     "n_sources": 7,
+     "evidence_rank": {
+      "bao cao su co nghiem trong trong vong 24 gio": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8071,
+     "top_vector_score": 0.4563
+    },
+    {
+     "id": "A8",
+     "category": "lookup",
+     "n_sources": 6,
+     "evidence_rank": {
+      "nhiet do tu 2 den 8 do c": 6
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.16666666666666666,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6025,
+     "top_vector_score": 0.3623
+    },
+    {
+     "id": "M1",
+     "category": "amended",
+     "n_sources": 8,
+     "evidence_rank": {
+      "la 1 5 ty dong cho moi goi mua sam": 3
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.3333333333333333,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 8453,
+     "top_vector_score": 0.5766
+    },
+    {
+     "id": "M2",
+     "category": "amended",
+     "n_sources": 8,
+     "evidence_rank": {
+      "la 1 5 ty dong cho moi goi mua sam": 3
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.3333333333333333,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 4549,
+     "top_vector_score": 0.5912
+    },
+    {
+     "id": "M3",
+     "category": "amended",
+     "n_sources": 9,
+     "evidence_rank": {
+      "giai quyet trong thoi han 15 ngay lam viec": null
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 8856,
+     "top_vector_score": 0.6288
+    },
+    {
+     "id": "M4",
+     "category": "amended",
+     "n_sources": 8,
+     "evidence_rank": {
+      "tu 30 trieu dong den 60 trieu dong": 5
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "mrr": 0.2,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 8566,
+     "top_vector_score": 0.6666
+    },
+    {
+     "id": "M5",
+     "category": "amended",
+     "n_sources": 6,
+     "evidence_rank": {
+      "giai quyet trong thoi han 15 ngay lam viec": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 3195,
+     "top_vector_score": 0.5411
+    },
+    {
+     "id": "M7",
+     "category": "amended_long",
+     "n_sources": 8,
+     "evidence_rank": {
+      "co hieu luc 48 thang ke tu ngay cap": null
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.0,
+     "context_hit": false,
+     "context_recall": 0.0,
+     "stale_in_context": false,
+     "current_marked_amendment": false,
+     "stale_without_current": false,
+     "context_chars": 5983,
+     "top_vector_score": 0.6294
+    },
+    {
+     "id": "M8",
+     "category": "amended_long",
+     "n_sources": 7,
+     "evidence_rank": {
+      "co hieu luc 48 thang ke tu ngay cap": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 7379,
+     "top_vector_score": 0.606
+    },
+    {
+     "id": "M9",
+     "category": "amended_long",
+     "n_sources": 8,
+     "evidence_rank": {
+      "duoc gia han hai lan": null
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 6020,
+     "top_vector_score": 0.4689
+    },
+    {
+     "id": "M6",
+     "category": "amended",
+     "n_sources": 6,
+     "evidence_rank": {
+      "bai bo khoan 3 dieu 9": null
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.0,
+     "context_hit": false,
+     "context_recall": 0.0,
+     "context_chars": 6667,
+     "top_vector_score": 0.5545
+    },
+    {
+     "id": "X1",
+     "category": "multi_doc",
+     "n_sources": 8,
+     "evidence_rank": {
+      "ke khai lai gia khi co bien dong la 45 ngay": 4,
+      "bao hanh toi thieu cua thiet bi y te la 24 thang": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.5,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8063,
+     "top_vector_score": 0.5636
+    },
+    {
+     "id": "X2",
+     "category": "multi_doc",
+     "n_sources": 6,
+     "evidence_rank": {
+      "luu mau thuoc la 3 nam": null,
+      "luu tru toi thieu 10 nam": 3
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.5,
+     "recall@5": 0.5,
+     "mrr": 0.3333333333333333,
+     "context_hit": false,
+     "context_recall": 0.5,
+     "context_chars": 6585,
+     "top_vector_score": 0.5064
+    },
+    {
+     "id": "X3",
+     "category": "multi_doc",
+     "n_sources": 9,
+     "evidence_rank": {
+      "cong khai tren cong thong tin cua co quan quan ly trong 5 ngay lam viec": 1,
+      "giai quyet trong thoi han 15 ngay lam viec": null
+     },
+     "recall@1": 0.5,
+     "recall@3": 0.5,
+     "recall@5": 0.5,
+     "mrr": 1.0,
+     "context_hit": false,
+     "context_recall": 0.5,
+     "context_chars": 8911,
+     "top_vector_score": 0.5299
+    },
+    {
+     "id": "R1",
+     "category": "relation",
+     "n_sources": 8,
+     "evidence_rank": {
+      "bai bo nghi dinh so 77/2018/nd-cp": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 5983,
+     "top_vector_score": 0.6523
+    },
+    {
+     "id": "R2",
+     "category": "relation",
+     "n_sources": 8,
+     "evidence_rank": {
+      "thay the nghi dinh so 55/2019/nd-cp": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 5186,
+     "top_vector_score": 0.5253
+    },
+    {
+     "id": "R3",
+     "category": "relation",
+     "n_sources": 7,
+     "evidence_rank": {
+      "sua doi bo sung mot so dieu cua nghi dinh so 101/2030/nd-cp": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 4829,
+     "top_vector_score": 0.7271
+    },
+    {
+     "id": "O1",
+     "category": "ocr_noisy",
+     "n_sources": 8,
+     "evidence_rank": {
+      "sau khi mo nap la 28 ngay": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8333,
+     "top_vector_score": 0.5534
+    },
+    {
+     "id": "O2",
+     "category": "ocr_noisy",
+     "n_sources": 9,
+     "evidence_rank": {
+      "tieu huy trong thoi han 60 ngay": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8716,
+     "top_vector_score": 0.6789
+    },
+    {
+     "id": "O3",
+     "category": "ocr_noisy",
+     "n_sources": 8,
+     "evidence_rank": {
+      "nhiet do 15 den 25 do c": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8420,
+     "top_vector_score": 0.5076
+    },
+    {
+     "id": "P1",
+     "category": "paraphrase",
+     "n_sources": 8,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8350,
+     "top_vector_score": 0.5335
+    },
+    {
+     "id": "P2",
+     "category": "paraphrase",
+     "n_sources": 9,
+     "evidence_rank": {
+      "sau khi mo nap la 28 ngay": 6
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.16666666666666666,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 9031,
+     "top_vector_score": 0.3672
+    },
+    {
+     "id": "P3",
+     "category": "paraphrase",
+     "n_sources": 8,
+     "evidence_rank": {
+      "bao cao su co nghiem trong trong vong 24 gio": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8868,
+     "top_vector_score": 0.6547
+    }
+   ]
+  },
+  "hybrid": {
+   "config": "hybrid",
+   "flags": {
+    "hybrid_search": true,
+    "pin_articles": false,
+    "expand_amendments": true
+   },
+   "overall": {
+    "n": 29,
+    "recall@1": 0.569,
+    "recall@3": 0.793,
+    "recall@5": 0.879,
+    "mrr": 0.722,
+    "context_hit": 0.897,
+    "context_recall": 0.914,
+    "stale_in_context": 1.0,
+    "current_marked_amendment": 1.0,
+    "stale_without_current": 0.0
+   },
+   "by_category": {
+    "amended": {
+     "n": 6,
+     "recall@1": 0.333,
+     "recall@3": 0.667,
+     "recall@5": 0.667,
+     "mrr": 0.5,
+     "context_hit": 0.833,
+     "context_recall": 0.833,
+     "stale_in_context": 1.0,
+     "current_marked_amendment": 1.0,
+     "stale_without_current": 0.0
+    },
+    "amended_long": {
+     "n": 3,
+     "recall@1": 0.333,
+     "recall@3": 0.333,
+     "recall@5": 0.667,
+     "mrr": 0.448,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": 1.0,
+     "current_marked_amendment": 1.0,
+     "stale_without_current": 0.0
+    },
+    "lookup": {
+     "n": 8,
+     "recall@1": 0.75,
+     "recall@3": 0.875,
+     "recall@5": 1.0,
+     "mrr": 0.844,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "multi_doc": {
+     "n": 3,
+     "recall@1": 0.167,
+     "recall@3": 0.667,
+     "recall@5": 0.833,
+     "mrr": 0.667,
+     "context_hit": 0.667,
+     "context_recall": 0.833,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "ocr_noisy": {
+     "n": 3,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "paraphrase": {
+     "n": 3,
+     "recall@1": 0.333,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.611,
+     "context_hit": 0.667,
+     "context_recall": 0.667,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "relation": {
+     "n": 3,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    }
+   },
+   "latency_ms": {
+    "p50": 2.3,
+    "p95": 2.8
+   },
+   "est_context_tokens": {
+    "mean": 2679,
+    "max": 3054
+   },
+   "unanswerable": [
+    {
+     "id": "N1",
+     "top_vector_score": 0.5269598160387113,
+     "n_sources": 8
+    },
+    {
+     "id": "N2",
+     "top_vector_score": 0.5601178999140136,
+     "n_sources": 9
+    },
+    {
+     "id": "N3",
+     "top_vector_score": 0.49249019374558084,
+     "n_sources": 8
+    }
+   ],
+   "answerable_top_vector_score": [
+    0.5872,
+    0.5899,
+    0.6,
+    0.5653,
+    0.569,
+    0.5845,
+    0.4563,
+    0.3623,
+    0.5766,
+    0.5912,
+    0.6288,
+    0.6666,
+    0.5411,
+    0.6294,
+    0.606,
+    0.4689,
+    0.5545,
+    0.5636,
+    0.5064,
+    0.5299,
+    0.6523,
+    0.5253,
+    0.7271,
+    0.5534,
+    0.6789,
+    0.5076,
+    0.5335,
+    0.3672,
+    0.6547
+   ],
+   "per_question": [
+    {
+     "id": "A1",
+     "category": "lookup",
+     "n_sources": 9,
+     "evidence_rank": {
+      "bao hanh toi thieu cua thiet bi y te la 24 thang": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8241,
+     "top_vector_score": 0.5872
+    },
+    {
+     "id": "A2",
+     "category": "lookup",
+     "n_sources": 8,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8630,
+     "top_vector_score": 0.5899
+    },
+    {
+     "id": "A3",
+     "category": "lookup",
+     "n_sources": 7,
+     "evidence_rank": {
+      "luu tru toi thieu 10 nam": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 7935,
+     "top_vector_score": 0.6
+    },
+    {
+     "id": "A4",
+     "category": "lookup",
+     "n_sources": 9,
+     "evidence_rank": {
+      "bon nhom a b c d": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8976,
+     "top_vector_score": 0.5653
+    },
+    {
+     "id": "A5",
+     "category": "lookup",
+     "n_sources": 9,
+     "evidence_rank": {
+      "dao tao toi thieu 16 gio": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 9162,
+     "top_vector_score": 0.569
+    },
+    {
+     "id": "A6",
+     "category": "lookup",
+     "n_sources": 9,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 4
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "mrr": 0.25,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 7251,
+     "top_vector_score": 0.5845
+    },
+    {
+     "id": "A7",
+     "category": "lookup",
+     "n_sources": 7,
+     "evidence_rank": {
+      "bao cao su co nghiem trong trong vong 24 gio": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8202,
+     "top_vector_score": 0.4563
+    },
+    {
+     "id": "A8",
+     "category": "lookup",
+     "n_sources": 8,
+     "evidence_rank": {
+      "nhiet do tu 2 den 8 do c": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8467,
+     "top_vector_score": 0.3623
+    },
+    {
+     "id": "M1",
+     "category": "amended",
+     "n_sources": 8,
+     "evidence_rank": {
+      "la 1 5 ty dong cho moi goi mua sam": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 8453,
+     "top_vector_score": 0.5766
+    },
+    {
+     "id": "M2",
+     "category": "amended",
+     "n_sources": 10,
+     "evidence_rank": {
+      "la 1 5 ty dong cho moi goi mua sam": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 6803,
+     "top_vector_score": 0.5912
+    },
+    {
+     "id": "M3",
+     "category": "amended",
+     "n_sources": 9,
+     "evidence_rank": {
+      "giai quyet trong thoi han 15 ngay lam viec": 6
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.16666666666666666,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 8856,
+     "top_vector_score": 0.6288
+    },
+    {
+     "id": "M4",
+     "category": "amended",
+     "n_sources": 8,
+     "evidence_rank": {
+      "tu 30 trieu dong den 60 trieu dong": 3
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.3333333333333333,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 8700,
+     "top_vector_score": 0.6666
+    },
+    {
+     "id": "M5",
+     "category": "amended",
+     "n_sources": 9,
+     "evidence_rank": {
+      "giai quyet trong thoi han 15 ngay lam viec": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6190,
+     "top_vector_score": 0.5411
+    },
+    {
+     "id": "M7",
+     "category": "amended_long",
+     "n_sources": 10,
+     "evidence_rank": {
+      "co hieu luc 48 thang ke tu ngay cap": 7
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.14285714285714285,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 8112,
+     "top_vector_score": 0.6294
+    },
+    {
+     "id": "M8",
+     "category": "amended_long",
+     "n_sources": 9,
+     "evidence_rank": {
+      "co hieu luc 48 thang ke tu ngay cap": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 7354,
+     "top_vector_score": 0.606
+    },
+    {
+     "id": "M9",
+     "category": "amended_long",
+     "n_sources": 9,
+     "evidence_rank": {
+      "duoc gia han hai lan": 5
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "mrr": 0.2,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 7119,
+     "top_vector_score": 0.4689
+    },
+    {
+     "id": "M6",
+     "category": "amended",
+     "n_sources": 7,
+     "evidence_rank": {
+      "bai bo khoan 3 dieu 9": null
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.0,
+     "context_hit": false,
+     "context_recall": 0.0,
+     "context_chars": 7935,
+     "top_vector_score": 0.5545
+    },
+    {
+     "id": "X1",
+     "category": "multi_doc",
+     "n_sources": 8,
+     "evidence_rank": {
+      "ke khai lai gia khi co bien dong la 45 ngay": 3,
+      "bao hanh toi thieu cua thiet bi y te la 24 thang": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8327,
+     "top_vector_score": 0.5636
+    },
+    {
+     "id": "X2",
+     "category": "multi_doc",
+     "n_sources": 8,
+     "evidence_rank": {
+      "luu mau thuoc la 3 nam": 4,
+      "luu tru toi thieu 10 nam": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.5,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8830,
+     "top_vector_score": 0.5064
+    },
+    {
+     "id": "X3",
+     "category": "multi_doc",
+     "n_sources": 9,
+     "evidence_rank": {
+      "cong khai tren cong thong tin cua co quan quan ly trong 5 ngay lam viec": 1,
+      "giai quyet trong thoi han 15 ngay lam viec": null
+     },
+     "recall@1": 0.5,
+     "recall@3": 0.5,
+     "recall@5": 0.5,
+     "mrr": 1.0,
+     "context_hit": false,
+     "context_recall": 0.5,
+     "context_chars": 8965,
+     "top_vector_score": 0.5299
+    },
+    {
+     "id": "R1",
+     "category": "relation",
+     "n_sources": 8,
+     "evidence_rank": {
+      "bai bo nghi dinh so 77/2018/nd-cp": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 5966,
+     "top_vector_score": 0.6523
+    },
+    {
+     "id": "R2",
+     "category": "relation",
+     "n_sources": 9,
+     "evidence_rank": {
+      "thay the nghi dinh so 55/2019/nd-cp": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6244,
+     "top_vector_score": 0.5253
+    },
+    {
+     "id": "R3",
+     "category": "relation",
+     "n_sources": 8,
+     "evidence_rank": {
+      "sua doi bo sung mot so dieu cua nghi dinh so 101/2030/nd-cp": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 5716,
+     "top_vector_score": 0.7271
+    },
+    {
+     "id": "O1",
+     "category": "ocr_noisy",
+     "n_sources": 8,
+     "evidence_rank": {
+      "sau khi mo nap la 28 ngay": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8333,
+     "top_vector_score": 0.5534
+    },
+    {
+     "id": "O2",
+     "category": "ocr_noisy",
+     "n_sources": 9,
+     "evidence_rank": {
+      "tieu huy trong thoi han 60 ngay": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8493,
+     "top_vector_score": 0.6789
+    },
+    {
+     "id": "O3",
+     "category": "ocr_noisy",
+     "n_sources": 9,
+     "evidence_rank": {
+      "nhiet do 15 den 25 do c": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8796,
+     "top_vector_score": 0.5076
+    },
+    {
+     "id": "P1",
+     "category": "paraphrase",
+     "n_sources": 8,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8379,
+     "top_vector_score": 0.5335
+    },
+    {
+     "id": "P2",
+     "category": "paraphrase",
+     "n_sources": 9,
+     "evidence_rank": {
+      "sau khi mo nap la 28 ngay": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8898,
+     "top_vector_score": 0.3672
+    },
+    {
+     "id": "P3",
+     "category": "paraphrase",
+     "n_sources": 8,
+     "evidence_rank": {
+      "bao cao su co nghiem trong trong vong 24 gio": 3
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.3333333333333333,
+     "context_hit": false,
+     "context_recall": 0.0,
+     "context_chars": 8188,
+     "top_vector_score": 0.6547
+    }
+   ]
+  },
+  "full": {
+   "config": "full",
+   "flags": {
+    "hybrid_search": true,
+    "pin_articles": true,
+    "expand_amendments": true
+   },
+   "overall": {
+    "n": 29,
+    "recall@1": 0.569,
+    "recall@3": 0.793,
+    "recall@5": 0.879,
+    "mrr": 0.722,
+    "context_hit": 0.897,
+    "context_recall": 0.914,
+    "stale_in_context": 1.0,
+    "current_marked_amendment": 1.0,
+    "stale_without_current": 0.0
+   },
+   "by_category": {
+    "amended": {
+     "n": 6,
+     "recall@1": 0.333,
+     "recall@3": 0.667,
+     "recall@5": 0.667,
+     "mrr": 0.5,
+     "context_hit": 0.833,
+     "context_recall": 0.833,
+     "stale_in_context": 1.0,
+     "current_marked_amendment": 1.0,
+     "stale_without_current": 0.0
+    },
+    "amended_long": {
+     "n": 3,
+     "recall@1": 0.333,
+     "recall@3": 0.333,
+     "recall@5": 0.667,
+     "mrr": 0.448,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": 1.0,
+     "current_marked_amendment": 1.0,
+     "stale_without_current": 0.0
+    },
+    "lookup": {
+     "n": 8,
+     "recall@1": 0.75,
+     "recall@3": 0.875,
+     "recall@5": 1.0,
+     "mrr": 0.844,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "multi_doc": {
+     "n": 3,
+     "recall@1": 0.167,
+     "recall@3": 0.667,
+     "recall@5": 0.833,
+     "mrr": 0.667,
+     "context_hit": 0.667,
+     "context_recall": 0.833,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "ocr_noisy": {
+     "n": 3,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "paraphrase": {
+     "n": 3,
+     "recall@1": 0.333,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.611,
+     "context_hit": 0.667,
+     "context_recall": 0.667,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    },
+    "relation": {
+     "n": 3,
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": 1.0,
+     "context_recall": 1.0,
+     "stale_in_context": null,
+     "current_marked_amendment": null,
+     "stale_without_current": null
+    }
+   },
+   "latency_ms": {
+    "p50": 2.1,
+    "p95": 3.3
+   },
+   "est_context_tokens": {
+    "mean": 2703,
+    "max": 3054
+   },
+   "unanswerable": [
+    {
+     "id": "N1",
+     "top_vector_score": 0.5269598160387113,
+     "n_sources": 8
+    },
+    {
+     "id": "N2",
+     "top_vector_score": 0.5601178999140136,
+     "n_sources": 9
+    },
+    {
+     "id": "N3",
+     "top_vector_score": 0.49249019374558084,
+     "n_sources": 8
+    }
+   ],
+   "answerable_top_vector_score": [
+    0.5872,
+    0.5899,
+    0.6,
+    0.5653,
+    0.569,
+    0.5845,
+    0.4563,
+    0.3623,
+    0.5766,
+    0.5912,
+    0.6288,
+    0.6666,
+    0.5411,
+    0.6294,
+    0.606,
+    0.4689,
+    0.5545,
+    0.5636,
+    0.5064,
+    0.5299,
+    0.6523,
+    0.5253,
+    0.7271,
+    0.5534,
+    0.6789,
+    0.5076,
+    0.5335,
+    0.3672,
+    0.6547
+   ],
+   "per_question": [
+    {
+     "id": "A1",
+     "category": "lookup",
+     "n_sources": 9,
+     "evidence_rank": {
+      "bao hanh toi thieu cua thiet bi y te la 24 thang": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8241,
+     "top_vector_score": 0.5872
+    },
+    {
+     "id": "A2",
+     "category": "lookup",
+     "n_sources": 8,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8630,
+     "top_vector_score": 0.5899
+    },
+    {
+     "id": "A3",
+     "category": "lookup",
+     "n_sources": 7,
+     "evidence_rank": {
+      "luu tru toi thieu 10 nam": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 7935,
+     "top_vector_score": 0.6
+    },
+    {
+     "id": "A4",
+     "category": "lookup",
+     "n_sources": 9,
+     "evidence_rank": {
+      "bon nhom a b c d": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8976,
+     "top_vector_score": 0.5653
+    },
+    {
+     "id": "A5",
+     "category": "lookup",
+     "n_sources": 9,
+     "evidence_rank": {
+      "dao tao toi thieu 16 gio": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 9162,
+     "top_vector_score": 0.569
+    },
+    {
+     "id": "A6",
+     "category": "lookup",
+     "n_sources": 10,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 4
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "mrr": 0.25,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 7671,
+     "top_vector_score": 0.5845
+    },
+    {
+     "id": "A7",
+     "category": "lookup",
+     "n_sources": 7,
+     "evidence_rank": {
+      "bao cao su co nghiem trong trong vong 24 gio": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8202,
+     "top_vector_score": 0.4563
+    },
+    {
+     "id": "A8",
+     "category": "lookup",
+     "n_sources": 8,
+     "evidence_rank": {
+      "nhiet do tu 2 den 8 do c": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8467,
+     "top_vector_score": 0.3623
+    },
+    {
+     "id": "M1",
+     "category": "amended",
+     "n_sources": 8,
+     "evidence_rank": {
+      "la 1 5 ty dong cho moi goi mua sam": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 8453,
+     "top_vector_score": 0.5766
+    },
+    {
+     "id": "M2",
+     "category": "amended",
+     "n_sources": 12,
+     "evidence_rank": {
+      "la 1 5 ty dong cho moi goi mua sam": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 7561,
+     "top_vector_score": 0.5912
+    },
+    {
+     "id": "M3",
+     "category": "amended",
+     "n_sources": 9,
+     "evidence_rank": {
+      "giai quyet trong thoi han 15 ngay lam viec": 6
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.16666666666666666,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 8856,
+     "top_vector_score": 0.6288
+    },
+    {
+     "id": "M4",
+     "category": "amended",
+     "n_sources": 8,
+     "evidence_rank": {
+      "tu 30 trieu dong den 60 trieu dong": 3
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.3333333333333333,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 8700,
+     "top_vector_score": 0.6666
+    },
+    {
+     "id": "M5",
+     "category": "amended",
+     "n_sources": 10,
+     "evidence_rank": {
+      "giai quyet trong thoi han 15 ngay lam viec": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 5910,
+     "top_vector_score": 0.5411
+    },
+    {
+     "id": "M7",
+     "category": "amended_long",
+     "n_sources": 12,
+     "evidence_rank": {
+      "co hieu luc 48 thang ke tu ngay cap": 7
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.14285714285714285,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 8835,
+     "top_vector_score": 0.6294
+    },
+    {
+     "id": "M8",
+     "category": "amended_long",
+     "n_sources": 9,
+     "evidence_rank": {
+      "co hieu luc 48 thang ke tu ngay cap": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 7354,
+     "top_vector_score": 0.606
+    },
+    {
+     "id": "M9",
+     "category": "amended_long",
+     "n_sources": 11,
+     "evidence_rank": {
+      "duoc gia han hai lan": 5
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 1.0,
+     "mrr": 0.2,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "stale_in_context": true,
+     "current_marked_amendment": true,
+     "stale_without_current": false,
+     "context_chars": 7842,
+     "top_vector_score": 0.4689
+    },
+    {
+     "id": "M6",
+     "category": "amended",
+     "n_sources": 7,
+     "evidence_rank": {
+      "bai bo khoan 3 dieu 9": null
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.0,
+     "recall@5": 0.0,
+     "mrr": 0.0,
+     "context_hit": false,
+     "context_recall": 0.0,
+     "context_chars": 7935,
+     "top_vector_score": 0.5545
+    },
+    {
+     "id": "X1",
+     "category": "multi_doc",
+     "n_sources": 8,
+     "evidence_rank": {
+      "ke khai lai gia khi co bien dong la 45 ngay": 3,
+      "bao hanh toi thieu cua thiet bi y te la 24 thang": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8327,
+     "top_vector_score": 0.5636
+    },
+    {
+     "id": "X2",
+     "category": "multi_doc",
+     "n_sources": 8,
+     "evidence_rank": {
+      "luu mau thuoc la 3 nam": 4,
+      "luu tru toi thieu 10 nam": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 0.5,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8830,
+     "top_vector_score": 0.5064
+    },
+    {
+     "id": "X3",
+     "category": "multi_doc",
+     "n_sources": 9,
+     "evidence_rank": {
+      "cong khai tren cong thong tin cua co quan quan ly trong 5 ngay lam viec": 1,
+      "giai quyet trong thoi han 15 ngay lam viec": null
+     },
+     "recall@1": 0.5,
+     "recall@3": 0.5,
+     "recall@5": 0.5,
+     "mrr": 1.0,
+     "context_hit": false,
+     "context_recall": 0.5,
+     "context_chars": 8965,
+     "top_vector_score": 0.5299
+    },
+    {
+     "id": "R1",
+     "category": "relation",
+     "n_sources": 8,
+     "evidence_rank": {
+      "bai bo nghi dinh so 77/2018/nd-cp": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 5966,
+     "top_vector_score": 0.6523
+    },
+    {
+     "id": "R2",
+     "category": "relation",
+     "n_sources": 9,
+     "evidence_rank": {
+      "thay the nghi dinh so 55/2019/nd-cp": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 6244,
+     "top_vector_score": 0.5253
+    },
+    {
+     "id": "R3",
+     "category": "relation",
+     "n_sources": 8,
+     "evidence_rank": {
+      "sua doi bo sung mot so dieu cua nghi dinh so 101/2030/nd-cp": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 5716,
+     "top_vector_score": 0.7271
+    },
+    {
+     "id": "O1",
+     "category": "ocr_noisy",
+     "n_sources": 8,
+     "evidence_rank": {
+      "sau khi mo nap la 28 ngay": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8333,
+     "top_vector_score": 0.5534
+    },
+    {
+     "id": "O2",
+     "category": "ocr_noisy",
+     "n_sources": 9,
+     "evidence_rank": {
+      "tieu huy trong thoi han 60 ngay": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8493,
+     "top_vector_score": 0.6789
+    },
+    {
+     "id": "O3",
+     "category": "ocr_noisy",
+     "n_sources": 9,
+     "evidence_rank": {
+      "nhiet do 15 den 25 do c": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8796,
+     "top_vector_score": 0.5076
+    },
+    {
+     "id": "P1",
+     "category": "paraphrase",
+     "n_sources": 8,
+     "evidence_rank": {
+      "kiem dinh dinh ky 12 thang mot lan": 1
+     },
+     "recall@1": 1.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 1.0,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8379,
+     "top_vector_score": 0.5335
+    },
+    {
+     "id": "P2",
+     "category": "paraphrase",
+     "n_sources": 9,
+     "evidence_rank": {
+      "sau khi mo nap la 28 ngay": 2
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.5,
+     "context_hit": true,
+     "context_recall": 1.0,
+     "context_chars": 8898,
+     "top_vector_score": 0.3672
+    },
+    {
+     "id": "P3",
+     "category": "paraphrase",
+     "n_sources": 8,
+     "evidence_rank": {
+      "bao cao su co nghiem trong trong vong 24 gio": 3
+     },
+     "recall@1": 0.0,
+     "recall@3": 1.0,
+     "recall@5": 1.0,
+     "mrr": 0.3333333333333333,
+     "context_hit": false,
+     "context_recall": 0.0,
+     "context_chars": 8188,
+     "top_vector_score": 0.6547
+    }
+   ]
+  }
+ },
+ "not_measured_here": [
+  "độ đúng câu trả lời",
+  "groundedness của LLM",
+  "khả năng từ chối của LLM",
+  "token thật của nhà cung cấp"
+ ]
+}

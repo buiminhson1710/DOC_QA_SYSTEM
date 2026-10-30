@@ -1,0 +1,1 @@
+Log MẪU sinh từ kho tổng hợp với embedding và LLM GIẢ LẬP (token/độ trễ không phản ánh dịch vụ thật). Chỉ để minh hoạ định dạng. Chạy `python scripts/analyze_trace.py --logs eval/sample_logs` để xem bản tóm tắt.
